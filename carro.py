@@ -1,4 +1,4 @@
-class Carro:
+class Carro: 
     def __init__(self, cor, placa, status, tipo):        
         self.cor = cor
         self.placa = placa
