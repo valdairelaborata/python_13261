@@ -1,0 +1,1 @@
+2 - Crie uma classe Calculadora com métodos para adição, subtração, multiplicação e divisão. Crie uma instância da classe e realize algumas operações.
