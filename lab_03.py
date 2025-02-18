@@ -1,7 +1,7 @@
 # Crie uma classe  com atributos titular e saldo. Adicione métodos para depositar e sacar dinheiro da conta. Certifique-se de tratar casos onde o saldo pode ser negativo.
 
 
-class ContaBancaria:
+class ContaBancaria: 
         def __init__(self, titular):
                 self.titular = titular
                 self.saldo = 0
