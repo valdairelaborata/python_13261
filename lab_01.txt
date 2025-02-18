@@ -1,1 +1,1 @@
-1- Crie uma classe chamada Carro com atributos marca e modelo. Adicione um método descricao() que retorna uma string formatada com a marca e o modelo do carro. Crie uma instância dessa classe e chame o método descricao().
+1- Considere uma classe de Conta Bancária e aplique os conceitos de encapsulamento para movimentar o saldo e a troca do titular.
