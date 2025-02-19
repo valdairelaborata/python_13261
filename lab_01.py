@@ -1,14 +1,35 @@
-# 1- Crie uma classe chamada Carro com atributos marca e modelo. Adicione um método descricao() que retorna uma string formatada com a marca e o modelo do carro. Crie uma instância dessa classe e chame o método descricao().
+# 1- Considere uma classe de Conta Bancária e aplique os conceitos de encapsulamento para movimentar o saldo e a troca do titular.
 
 
-class Carro: 
-    def __init__(self, marca, modelo):
-         self.marca = marca
-         self.modelo = modelo
+class ContaBancaria:
+    def __init__(self, titular):
+        self.__titular = titular
+        self.__saldo = 0
 
-    def descricao(self):
-        return f"Marca: {self.marca} e o modelo: {self.modelo}"
+    @property
+    def titular(self):
+        return self.__titular
+
+    @property
+    def saldo(self):
+        return self.__saldo
+
+    def trocar_titular(self, novo_titular):
+        self.__titular = novo_titular
+
+    def saque(self, valor):
+        self.__saldo -= valor
     
-    
-carro = Carro("Renault", "Sandero")
-print(carro.descricao())
+    def deposito(self, valor):
+        self.__saldo += valor
+
+
+conta = ContaBancaria("Ana")
+conta.trocar_titular("Paulo")
+conta.deposito(500)
+saldo = conta.saldo
+conta.saque(200)
+saldo = conta.saldo
+titular = conta.titular
+
+print("")
