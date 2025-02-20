@@ -1,3 +1,20 @@
-Crie uma classe  com atributos titular e saldo. Adicione métodos para depositar e sacar dinheiro da conta. Certifique-se de tratar casos onde o saldo pode ser negativo.
+1- Crie duas subclasses que herdam de ContaBancaria:
+Classe: ContaPoupanca:
+Atributos adicionais:
+__taxa_rendimento: taxa de rendimento mensal (em percentual, por exemplo, 0.5 para 0.5%).
+Métodos:
+render(self): Calcula o rendimento do mês, incrementando o saldo com base na taxa definida. Por exemplo, se o saldo for 1000 e a taxa for 0.5%, o novo saldo deverá ser 1000 + 1000 * 0.005.
 
+Classe: ContaInvestimento :
+Atributos adicionais:
+__investido: Guarda o total de dinheiro investido.
+__percentual_rendimento: Taxa de rendimento aplicada ao valor investido durante o resgate.
+Método investir(valor):
+Verifica se o valor é válido e se há saldo suficiente.
+Deduz o valor do saldo (usando o método sacar) e acumula no atributo __investido.
+Método resgatar(valor):
+Verifica se o valor é válido e se está disponível no total investido.
+Calcula um rendimento proporcional ao valor resgatado, adiciona esse rendimento ao valor, e credita o total no saldo.
+Atualiza o total investido.
 
+Crie instâncias e testes os métodos de cada classe.
