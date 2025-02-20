@@ -1,1 +1,1 @@
-2 - Crie uma classe Calculadora com métodos para adição, subtração, multiplicação e divisão. Crie uma instância da classe e realize algumas operações.
+2 - Crie uma classe ContaBancaria que inclui funcionalidades básicas e uma classe ContaCorrente que herda da classe base. A classe derivada ContaCorrente substitui o método sacar para considerar um limite de saque além do saldo disponível.
