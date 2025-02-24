@@ -1,1 +1,0 @@
-2 - Crie uma classe ContaBancaria que inclui funcionalidades básicas e uma classe ContaCorrente que herda da classe base. A classe derivada ContaCorrente substitui o método sacar para considerar um limite de saque além do saldo disponível.
