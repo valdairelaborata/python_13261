@@ -17,13 +17,16 @@ class ContaBancaria:
 # depositar(self, valor): Adiciona um valor ao saldo da conta.
 # sacar(self, valor): Retira um valor do saldo da conta, desde que haja saldo suficiente..
  
+   
     def depositar(self, valor):
         if valor > 0:
             self.saldo += valor
             print(f"Realizado o depósito no valor de {valor}.")
         else:
             print("O valor a ser depositado deve positivo.")
- 
+             
+
+
     def sacar(self, valor):
         if valor <= self.saldo:
             self.saldo -= valor
