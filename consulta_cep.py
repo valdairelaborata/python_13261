@@ -11,5 +11,5 @@ def obter_endereco_pelo_cep(cep):
         
 
 
-obter_endereco_pelo_cep("81580010")
+obter_endereco_pelo_cep("82600360")
 
