@@ -1,0 +1,2 @@
+- Com base no lab_01, crie um modelo que faça o CRUD para a manutenção de pedidos com o
+nome do cliente e o produto.
