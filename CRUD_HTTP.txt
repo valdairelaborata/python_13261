@@ -1,0 +1,9 @@
+
+# Protocolo HTTP:
+
+# CRUD
+
+# GET =  "R"
+# POST = "C"
+# PUT  = "U"
+# DELETE = "D"

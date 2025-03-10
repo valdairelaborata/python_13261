@@ -1,3 +1,0 @@
-1 - Crie um modelo de dados de Cliente. Com esse modelo de dados crie o banco e insira alguns registros no banco.
-
-Para o cliente é necessário armazenar o nome e e-mail.

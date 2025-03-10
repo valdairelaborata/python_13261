@@ -1,0 +1,1 @@
+1 - Cria uma API para consultar o CEP. A sua API deve consultar o endereço na via cep e exibir o resultado.
