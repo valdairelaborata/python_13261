@@ -1,8 +1,18 @@
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 from fastapi import FastAPI
 import requests
 
+from models import Base, Cliente
+
 app = FastAPI()
+
+DATABASE_URL = "sqlite:///clientes.db"
+engine = create_engine(DATABASE_URL)
+
+Base.metadata.create_all(bind=engine)
+
 
 class Endereco:
     def __init__(self, logradouro, bairro):
@@ -10,24 +20,46 @@ class Endereco:
         self.bairro = bairro
 
 
-@app.get("/consulta-cep")
-def Opa(cep: str):
-    url = f"https://viacep.com.br/ws/{cep}/json/"
-    resposta_via_cep = requests.get(url)
-
-    if(resposta_via_cep.status_code == 200):
-        dados = resposta_via_cep.json()
-        endereco = Endereco(logradouro = dados['logradouro'], bairro=dados['bairro'])
-        return endereco
-    else:
-        return {"Consulta via cep com erro!"}
 
 
+@app.get("/clientes")
+def GetCliente(id: int):
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    db = SessionLocal()
+    cliente = db.query(Cliente).filter(Cliente.id == id).first()
+    return cliente
 
-# @app.get("/obter-cliente")
-# def GetCliente():
-#     return {f"Obter um registro de cliente!{id}"}
+@app.post("/clientes")
+def POSTCliente(nome: str, email: str):
 
-# @app.put("/alterar-cliente")
-# def PUTCliente():
-#     return {"Alterar um registro de cliente!"}
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    db = SessionLocal()
+    
+    novo_cliente = Cliente(nome = nome, email=email)
+    db.add(novo_cliente)
+    db.commit()
+    db.close()
+
+    return {f"Cliente criado com sucesso!!!"}
+
+@app.put("/clientes")
+def PUTCliente(id: int, nome: str, email: str ):
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    db = SessionLocal()
+    cliente = db.query(Cliente).filter(Cliente.id == id).first()
+    cliente.nome = nome
+    cliente.email = email
+    db.commit()
+    db.close()
+    return {f"Cliente {nome} alterado com sucesso!!"}
+
+@app.delete("/clientes")
+def DELETECliente(id: int):
+
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    db = SessionLocal()
+    cliente = db.query(Cliente).filter(Cliente.id == id).first()
+    db.delete(cliente)
+    db.commit()
+    db.close()
+    return {f"Cliente {id} escluído com sucesso!!!"}
