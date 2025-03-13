@@ -2,7 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from fastapi import FastAPI
-import requests
 
 from models import Base, Cliente
 
