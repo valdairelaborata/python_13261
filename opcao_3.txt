@@ -1,0 +1,10 @@
+API de Cadastro de Clientes com Consulta de Endereço via CEP
+
+Desenvolva uma API com FastAPI para gerenciar o cadastro de clientes. A API deve permitir:
+
+Cadastrar um novo cliente informando nome, e-mail, telefone e CEP
+Consultar automaticamente o endereço completo com base no CEP informado (usando a API ViaCEP ou similar)
+Listar todos os clientes cadastrados
+Atualizar dados do cliente
+Excluir um cliente
+Os dados devem ser armazenados em um banco de dados SQLite, e as respostas devem ser no formato JSON.

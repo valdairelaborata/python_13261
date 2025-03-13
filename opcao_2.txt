@@ -1,0 +1,9 @@
+PI de Cadastro de Usuários
+
+Desenvolva uma API com FastAPI para gerenciar o cadastro de usuários. A API deve permitir:
+
+Criar um novo usuário com nome, e-mail e senha
+Listar todos os usuários cadastrados
+Atualizar informações de um usuário
+Excluir um usuário
+Os dados devem ser armazenados em um banco de dados SQLite, e as respostas devem ser no formato JSON.

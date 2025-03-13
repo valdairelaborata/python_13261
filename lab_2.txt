@@ -1,7 +1,0 @@
-2 - Modele uma API para um CRUD de produtos. A API deve consumir métodos para manipular registros em banco utilizando o SQLAlchemy e SQLite.
-    Cada registro de produtos deve ter os seguintes dados:
-        - id
-        - código
-        - nome
-        - descricao
-        - margem de lucro

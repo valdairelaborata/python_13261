@@ -1,0 +1,9 @@
+API de Gerenciamento de Tarefas
+
+Crie uma API usando FastAPI para gerenciar tarefas. A API deve permitir:
+
+Criar novas tarefas
+Listar todas as tarefas
+Atualizar o status de uma tarefa (pendente/concluída)
+Excluir uma tarefa
+A API deve utilizar um banco de dados SQLite e retornar respostas no formato JSON.
